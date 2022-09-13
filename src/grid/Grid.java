@@ -26,8 +26,8 @@ public class Grid extends JPanel implements Runnable, ActionListener{
 
 	@Override
 	public void run() {
-		JFrame jeff = new JFrame("Lines"); // In the beginning, there was Jeff. (define frame window, with name of program.)
-		
+		JFrame jeff = new JFrame("Grid"); // In the beginning, there was Jeff. (define frame window, with name of program.)
+		ImageIcon icon = new ImageIcon("grass.png");
 		
 		
 		jeff.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	// Jeff has to go to sleep when it is time for bed. (make sure program closes on quit.)
@@ -45,6 +45,7 @@ public class Grid extends JPanel implements Runnable, ActionListener{
 				JButton b = new JButton(""+i+"");
 				b.setBounds(irvl+45,inc,45,45);
 				b.setSize(45,45);
+				b.setIcon(icon);
 				grid[0][i] = i;
 				grid[j][0] = j;
 				
